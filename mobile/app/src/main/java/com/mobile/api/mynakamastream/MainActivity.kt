@@ -11,16 +11,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
+/**
+ * This activity loads a web page into a WebView after checking and requesting internet permission if necessary.
+ */
 class MainActivity : AppCompatActivity() {
 
-    // URL de la página web que quieres cargar
-    private val BASE_URL = "https://www.google.com/"
+    // URL of the web page to load
+    private val BASE_URL = "http://nakamastream.domcloud.dev/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Verificar y solicitar permiso de Internet si es necesario
+        // Check and request internet permission if not granted
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.INTERNET
@@ -34,26 +37,30 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         } else {
+            // Internet permission granted, proceed to set up WebView
             setupWebView()
         }
     }
 
+    /**
+     * Set up the WebView to display the web page.
+     */
     private fun setupWebView() {
         val webView: WebView = findViewById(R.id.WebView)
 
-        // Habilitar JavaScript
+        // Enable JavaScript
         val settings = webView.settings
         settings.javaScriptEnabled = true
 
-        // Configurar WebViewClient para manejar la navegación dentro del WebView
+        // Configure WebViewClient to handle navigation within the WebView
         webView.webViewClient = WebViewClient()
 
-        // Configurar WebChromeClient para mostrar el progreso de la carga de la página
+        // Configure WebChromeClient to display page loading progress
         webView.webChromeClient = object : WebChromeClient() {
-            // Aquí puedes sobrescribir métodos como onProgressChanged() si quieres mostrar el progreso
+            // You can override methods like onProgressChanged() here if you want to display progress
         }
 
-        // Cargar la URL en el WebView
+        // Load the URL into the WebView
         webView.loadUrl(BASE_URL)
     }
 }
