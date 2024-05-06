@@ -1,6 +1,6 @@
 # NakamaStream-Android
 
-![NakamaStream Logo](https://github.com/NakamaStream/Resources/blob/main/NakamStream-logo-HD-removebg.png?raw=true)
+<img src="https://github.com/NakamaStream/Resources/blob/main/NakamStream-logo-HD-removebg.png?raw=true" alt="Logo de NakamaStream" width="300">
 
 ## Description
 NakamaStream-Android is an application for Android devices that allows users to watch and enjoy anime content online. This version of NakamaStream is specifically designed to work optimally on Android devices, providing a smooth and enjoyable user experience.
