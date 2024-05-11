@@ -112,6 +112,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Internet permission Code
     companion object {
         private const val INTERNET_PERMISSION_REQUEST_CODE = 123
     }
