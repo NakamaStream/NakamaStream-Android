@@ -2,33 +2,44 @@
 
 <img src="https://github.com/NakamaStream/Resources/blob/main/NakamStream-logo-HD-removebg.png?raw=true" alt="Logo de NakamaStream" width="300">
 
-## Description
-NakamaStream-Android is an application for Android devices that allows users to watch and enjoy anime content online. This version of NakamaStream is specifically designed to work optimally on Android devices, providing a smooth and enjoyable user experience.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Features
-- Search and explore a wide variety of anime.
-- View detailed information about each series, including synopses, ratings, and more.
-- Bookmark anime for easy access in the future.
-- Play anime episodes directly on the device.
-- Intuitive and easy-to-navigate user interface.
-- Compatible with a wide range of Android devices.
+## Get started
 
-## Installation
-To install NakamaStream-Android on your Android device, follow these steps:
+1. Install dependencies
 
-1. Download the latest APK file from [here](url_del_apk).
-2. Open the APK file on your Android device.
-3. Follow the on-screen instructions to complete the installation.
+   ```bash
+   npm install
+   ```
 
-## Contribution
-Contributions are welcome! If you wish to contribute to NakamaStream-Android, follow these steps:
+2. Start the app
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add a new feature'`).
-5. Push the branch (`git push origin feature/new-feature`).
-6. Create a new Pull Request.
+   ```bash
+    npx expo start
+   ```
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
+
+```bash
+npm run reset-project
+```
+
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+## Learn more
+
+To learn more about developing your project with Expo, look at the following resources:
+
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
