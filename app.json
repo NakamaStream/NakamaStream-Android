@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "nakamaAndroid",
-    "slug": "nakamaAndroid",
+    "name": "NakamaStream",
+    "slug": "NakamaStream",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nakamastream.nakamaAndroid"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b0a072f8-a183-4ff5-b59d-f813eb04f04f"
+      }
+    },
+    "owner": "nakamastream"
   }
 }
