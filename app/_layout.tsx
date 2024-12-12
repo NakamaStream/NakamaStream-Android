@@ -7,6 +7,7 @@ import NetworkCheck from './components/NetworkCheck';
 import UpdateModal from './components/UpdateModal';
 import { checkForUpdates } from './utils/updateChecker';
 import { CURRENT_VERSION } from './constants/config';
+import * as Notifications from 'expo-notifications';
 
 export default function RootLayout() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,15 @@ export default function RootLayout() {
           newVersion: result.version
         });
         setShowUpdateModal(true);
+        
+        await Notifications.scheduleNotificationAsync({
+          content: {
+            title: "Actualización disponible",
+            body: `Nueva versión ${result.version} está disponible.`,
+            data: { updateUrl: result.updateUrl },
+          },
+          trigger: null,
+        });
       }
     };
 
