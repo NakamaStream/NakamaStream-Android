@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "NakamaStream",
-    "slug": "NakamaStream",
-    "version": "1.0.0",
+    "slug": "nakamaAndroid",
+    "version": "1.0.1",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -16,7 +16,10 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.nakamastream.nakamaAndroid"
+      "package": "com.nakamastream.nakamaAndroid",
+      "permissions": [
+        "NOTIFICATIONS"
+      ]
     },
     "web": {
       "bundler": "metro",
