@@ -45,7 +45,7 @@ export default function RootLayout() {
   }, []);
 
   const handleOrientationChange = async ({ window }: { window: ScaledSize }) => {
-    const { width, height } = Dimensions.get('window');
+    const { width, height } = window;
     if (width > height) {
       await ScreenOrientation.lockAsync(
         ScreenOrientation.OrientationLock.LANDSCAPE
@@ -65,6 +65,18 @@ export default function RootLayout() {
   const webViewStyle = isFullscreen ? 
     [styles.webview, styles.fullscreen] : 
     styles.webview;
+
+  useEffect(() => {
+    // Solicitar permiso de notificaciones
+    const requestNotificationPermission = async () => {
+      const { status } = await Notifications.requestPermissionsAsync();
+      if (status !== 'granted') {
+        alert('¡Se requieren permisos de notificación!');
+      }
+    };
+
+    requestNotificationPermission();
+  }, []);
 
   return (
     <>
