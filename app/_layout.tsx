@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { WebView } from 'react-native-webview';
-import { StyleSheet, Dimensions, ScaledSize } from 'react-native';
+import { StyleSheet, Dimensions, ScaledSize, StatusBar } from 'react-native';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import LoadingScreen from './components/LoadingScreen';
 import NetworkCheck from './components/NetworkCheck';
@@ -29,7 +29,7 @@ export default function RootLayout() {
           newVersion: result.version
         });
         setShowUpdateModal(true);
-        
+
         await Notifications.scheduleNotificationAsync({
           content: {
             title: "Actualización disponible",
@@ -62,8 +62,8 @@ export default function RootLayout() {
     return () => subscription.remove();
   }, []);
 
-  const webViewStyle = isFullscreen ? 
-    [styles.webview, styles.fullscreen] : 
+  const webViewStyle = isFullscreen ?
+    [styles.webview, styles.fullscreen] :
     styles.webview;
 
   useEffect(() => {
@@ -80,6 +80,7 @@ export default function RootLayout() {
 
   return (
     <>
+      <StatusBar backgroundColor="#121212" barStyle="light-content" />
       <NetworkCheck>
         <WebView
           source={{ uri: 'https://nakamastream.lat/login' }}
