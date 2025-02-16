@@ -5,11 +5,11 @@ export default function LoadingScreen() {
     const [mensaje, setMensaje] = useState('');
 
     const mensajesAleatorios = [
-        "Preparando todo...",
-        "Cargando datos...",
-        "Un momento por favor...",
-        "Casi listo...",
-        "Iniciando aplicación..."
+        "Cargando recursos...",
+        "Preparando contenido...",
+        "Obteniendo información...",
+        "Sincronizando datos...", 
+        "Iniciando servicios..."
     ];
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#121212',
         zIndex: 999,
     },
     animation: {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     texto: {
         marginTop: 20,
         fontSize: 20,
-        color: '#333',
+        color: '#fff',
         fontWeight: '600',
     }
 });
